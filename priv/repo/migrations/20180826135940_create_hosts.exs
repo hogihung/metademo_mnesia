@@ -2,7 +2,7 @@ defmodule MetademoMnesia.Repo.Migrations.CreateHosts do
   use Ecto.Migration
 
   def change do
-    create table(:hosts) do
+    create_if_not_exists table(:hosts, engine: :ordered_set) do
       add :hostname, :string
       add :description, :string
       add :cpu_count, :integer
