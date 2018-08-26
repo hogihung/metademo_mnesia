@@ -20,7 +20,10 @@ defmodule MetademoMnesiaWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", MetademoMnesiaWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", MetademoMnesiaWeb do
+    pipe_through :api
+
+    resources "/hosts", HostController, except: [:new, :edit]
+    resources "/host_attrs", HostAttrController, except: [:new, :edit]
+  end
 end
