@@ -25,3 +25,6 @@ npm-debug.log
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+
+# Exclude the data files Mnesia creates for local data storage
+/priv/data/mnesia
