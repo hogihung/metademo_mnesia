@@ -14,6 +14,7 @@ defmodule MetademoMnesia.AssetMetadata.Host do
     field :updated_by, :string
 
     timestamps()
+    has_many :host_attrs, MetademoMnesia.AssetMetadata.HostAttr
   end
 
   @doc false

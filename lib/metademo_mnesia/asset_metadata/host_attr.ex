@@ -11,6 +11,7 @@ defmodule MetademoMnesia.AssetMetadata.HostAttr do
     field :value, :string
 
     timestamps()
+    belongs_to :host, MetademoMnesia.AssetMetadata.Host
   end
 
   @doc false
