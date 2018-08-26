@@ -10,10 +10,13 @@ config :metademo_mnesia, MetademoMnesiaWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
+# config :metademo_mnesia, MetademoMnesia.Repo,
+#   adapter: Ecto.Adapters.Postgres,
+#   username: "postgres",
+#   password: "postgres",
+#   database: "metademo_mnesia_test",
+#   hostname: "localhost",
+#   pool: Ecto.Adapters.SQL.Sandbox
+
 config :metademo_mnesia, MetademoMnesia.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "metademo_mnesia_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  adapter: EctoMnesia.Adapter

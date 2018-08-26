@@ -9,6 +9,14 @@ use Mix.Config
 config :metademo_mnesia,
   ecto_repos: [MetademoMnesia.Repo]
 
+# Configure Mnesia fo Ecto
+config :ecto_mnesia,
+  host: {:system, :atom, "MNESIA_HOST", Kernel.node()},
+  storage_type: {:system, :atom, "MNESIA_STORGE_TYPE", :disc_copies}
+
+config :mnesia,
+  dir: 'priv/data/mnesia'
+
 # Configures the endpoint
 config :metademo_mnesia, MetademoMnesiaWeb.Endpoint,
   url: [host: "localhost"],
