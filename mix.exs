@@ -20,7 +20,7 @@ defmodule MetademoMnesia.Mixfile do
   def application do
     [
       mod: {MetademoMnesia.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:ecto_mnesia, :logger, :runtime_tools]
     ]
   end
 
