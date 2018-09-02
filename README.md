@@ -83,12 +83,20 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Seed The App With Some Data Using Curl
 
-  - Open the file Seed_Data_Via_Curl_Post.txt in your favorite text editor
+  - Open the file Seed\_Data\_Via\_Curl\_Post.txt in your favorite text editor
   - Copy the curl examples that are doing a POST
   - Paste those values into a terminal that can hit the Web App you started previously
   - Via the browser, visit http://localhost:4000/api/hosts     (view list of all hosts in DB)
   - Via the browser, visit http://localhost:4000/api/hosts/1   (view one host)
 
+
+**TIP:** Reset the database:
+
+  ```
+  mix ecto.drop
+  mix ecto.create
+  mix ecto.migrate
+  ```
 
 
 ## Switch Over To Using Mnesia
@@ -119,6 +127,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ## Learn more
 
   * Article: [A Trip Down Mnesia Lane](https://medium.com/@hogihung/a-trip-down-mnesia-lane-bb4549c74bf9)
+  * [Erlang Mnesia Overview](http://erlang.org/doc/apps/mnesia/Mnesia_overview.html)
   * [Ecto Adapter for Mnesia](https://hexdocs.pm/ecto_mnesia/readme.html)
   * Ecto Mnesia Repo on [Github](https://github.com/Nebo15/ecto_mnesia)
   * Ecto [Query](https://hexdocs.pm/ecto/Ecto.Query.html#content)
